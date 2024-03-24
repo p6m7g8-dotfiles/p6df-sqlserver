@@ -23,8 +23,8 @@ p6df::modules::sqlserver::deps() {
 p6df::modules::sqlserver::external::brew() {
 
   brew tap microsoft/mssql-release
-  brew install msodbcsql # XXX: fix prompt for EULA
-  brew install mssql-tools
+  p6df::modules::homebrew::cli::brew::install msodbcsql # XXX: fix prompt for EULA
+  p6df::modules::homebrew::cli::brew::install mssql-tools
 
   docker pull mcr.microsoft.com/mssql/server
 
@@ -34,31 +34,19 @@ p6df::modules::sqlserver::external::brew() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::sqlserver::run()
+# Function: p6df::modules::sqlserver::init(_module, dir)
 #
-#  Environment:	 ACCEPT_EULA
+#  Args:
+#	_module -
+#	dir -
+#
 #>
 ######################################################################
-p6df::modules::sqlserver::run() {
+p6df::modules::sqlserver::init() {
+  local _module="$1"
+  local dir="$2"
 
-  local now_eps=$(p6_dt_now_epoch_seconds)
-
-  docker run -d --name sqlserver-${now_eps} -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=$SA_PASSWORD' -p 1433:1433 microsoft/mssql-server-linux
-
-  p6_return_void
-}
-
-######################################################################
-#<
-#
-# Function: p6_sqlcmd()
-#
-#  Environment:	 SA_PASSWORD
-#>
-######################################################################
-p6_sqlcmd() {
-
-  sqlcmd -S localhost -U sa -P $SA_PASSWORD
+  p6_bootstrap "$dir"
 
   p6_return_void
 }

@@ -10,8 +10,7 @@
   - [Summary](#summary)
   - [Contributing](#contributing)
   - [Code of Conduct](#code-of-conduct)
-  - [Changes](#changes)
-    - [Usage](#usage)
+  - [Usage](#usage)
   - [Author](#author)
 
 ### Badges
@@ -34,23 +33,43 @@
 
 - [Code of Conduct](https://github.com/p6m7g8/.github/blob/master/CODE_OF_CONDUCT.md)
 
-## Changes
-
-- [Change Log](CHANGELOG.md)
-
 ## Usage
+
+
+### Aliases
+
+
+### Functions
 
 ### p6df-sqlserver:
 
 #### p6df-sqlserver/init.zsh:
 
-- p6_sqlcmd()
 - p6df::modules::sqlserver::deps()
 - p6df::modules::sqlserver::external::brew()
-- p6df::modules::sqlserver::run()
+- p6df::modules::sqlserver::init(_module, dir)
+
+
+### p6df-sqlserver/lib:
+
+#### p6df-sqlserver/lib/cli.sh:
+
+- p6df::modules::sqlserver::cli::run()
+
+#### p6df-sqlserver/lib/cmd.sh:
+
+- p6df::modules::sqlserver::cmd::sql(...)
 
 
 
+## Hier
+```text
+.
+├── cli.sh
+└── cmd.sh
+
+1 directory, 2 files
+```
 ## Author
 
 Philip M . Gollucci <pgollucci@p6m7g8.com>
