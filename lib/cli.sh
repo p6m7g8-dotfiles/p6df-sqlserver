@@ -4,7 +4,7 @@
 #
 # Function: p6df::modules::sqlserver::cli::run()
 #
-#  Environment:	 ACCEPT_EULA
+#  Environment:	 SA_PASSWORD
 #>
 ######################################################################
 p6df::modules::sqlserver::cli::run() {
