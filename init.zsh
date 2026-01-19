@@ -17,7 +17,6 @@ p6df::modules::sqlserver::deps() {
 #
 # Function: p6df::modules::sqlserver::external::brew()
 #
-#  Environment:	 XXX
 #>
 ######################################################################
 p6df::modules::sqlserver::external::brew() {
