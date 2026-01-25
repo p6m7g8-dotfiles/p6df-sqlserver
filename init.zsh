@@ -22,8 +22,8 @@ p6df::modules::sqlserver::deps() {
 p6df::modules::sqlserver::external::brew() {
 
   brew tap microsoft/mssql-release
-  p6df::modules::homebrew::cli::brew::install msodbcsql # XXX: fix prompt for EULA
-  p6df::modules::homebrew::cli::brew::install mssql-tools
+  p6df::core::homebrew::cli::brew::install msodbcsql # XXX: fix prompt for EULA
+  p6df::core::homebrew::cli::brew::install mssql-tools
 
   docker pull mcr.microsoft.com/mssql/server
 
