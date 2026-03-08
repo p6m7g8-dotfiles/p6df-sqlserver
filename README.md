@@ -39,8 +39,8 @@ TODO: Add a short summary of this module.
 - `p6df::modules::sqlserver::external::brew()`
 - `p6df::modules::sqlserver::init(_module, dir)`
   - Args:
-    - _module - 
-    - dir - 
+    - _module -
+    - dir -
 
 #### p6df-sqlserver/lib
 
@@ -52,7 +52,7 @@ TODO: Add a short summary of this module.
 
 - `p6df::modules::sqlserver::cmd::sql(...)`
   - Args:
-    - ... - 
+    - ... -
 
 ## Hierarchy
 
