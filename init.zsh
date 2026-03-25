@@ -21,7 +21,7 @@ p6df::modules::sqlserver::deps() {
 ######################################################################
 p6df::modules::sqlserver::external::brew() {
 
-  brew tap microsoft/mssql-release
+  p6df::core::homebrew::cmd::brew tap microsoft/mssql-release
   p6df::core::homebrew::cli::brew::install msodbcsql # XXX: fix prompt for EULA
   p6df::core::homebrew::cli::brew::install mssql-tools
 
