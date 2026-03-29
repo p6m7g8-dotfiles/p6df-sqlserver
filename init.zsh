@@ -15,11 +15,11 @@ p6df::modules::sqlserver::deps() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::sqlserver::external::brew()
+# Function: p6df::modules::sqlserver::external::brews()
 #
 #>
 ######################################################################
-p6df::modules::sqlserver::external::brew() {
+p6df::modules::sqlserver::external::brews() {
 
   p6df::core::homebrew::cmd::brew tap microsoft/mssql-release
   p6df::core::homebrew::cli::brew::install msodbcsql # XXX: fix prompt for EULA
