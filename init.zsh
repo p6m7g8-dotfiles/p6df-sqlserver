@@ -33,19 +33,15 @@ p6df::modules::sqlserver::external::brews() {
 ######################################################################
 #<
 #
-# Function: p6df::modules::sqlserver::init(_module, dir)
+# Function: words sqlserver $MSSQL_SA_PASSWORD = p6df::modules::sqlserver::profile::mod()
 #
-#  Args:
-#	_module -
-#	dir -
+#  Returns:
+#	words - sqlserver $MSSQL_SA_PASSWORD
 #
+#  Environment:	 MSSQL_SA_PASSWORD
 #>
 ######################################################################
-p6df::modules::sqlserver::init() {
-  local _module="$1"
-  local dir="$2"
+p6df::modules::sqlserver::profile::mod() {
 
-  p6_bootstrap "$dir"
-
-  p6_return_void
+  p6_return_words 'sqlserver' '$MSSQL_SA_PASSWORD'
 }
