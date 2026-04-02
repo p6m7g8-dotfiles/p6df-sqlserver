@@ -43,5 +43,5 @@ p6df::modules::sqlserver::external::brews() {
 ######################################################################
 p6df::modules::sqlserver::profile::mod() {
 
-  p6_return_words 'sqlserver' "$"
+  p6_return_words 'sqlserver' '$MSSQL_SA_PASSWORD'
 }

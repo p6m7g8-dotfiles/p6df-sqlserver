@@ -41,6 +41,7 @@ TODO: Add a short summary of this module.
   - Args:
     - _module -
     - dir -
+- `words sqlserver $MSSQL_SA_PASSWORD = p6df::modules::sqlserver::profile::mod()`
 
 #### p6df-sqlserver/lib
 
