@@ -33,10 +33,10 @@ p6df::modules::sqlserver::external::brews() {
 ######################################################################
 #<
 #
-# Function: words sqlserver $MSSQL_SA_PASSWORD = p6df::modules::sqlserver::profile::mod()
+# Function: words sqlserver = p6df::modules::sqlserver::profile::mod()
 #
 #  Returns:
-#	words - sqlserver $MSSQL_SA_PASSWORD
+#	words - sqlserver
 #
 #  Environment:	 MSSQL_SA_PASSWORD
 #>
